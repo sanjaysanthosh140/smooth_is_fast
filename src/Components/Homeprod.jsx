@@ -49,7 +49,7 @@ function Homeprod() {
   const DeleteProduct = (id) => {
     try {
       axios
-        .delete(`https://slow-is-smooth-serverside-2.onrender.com/products/delete/${id}`)
+        .delete(`https://slow-is-smooth-serverside-rvyo.onrender.com/api/products/delete/${id}`)
         .then((response) => {
           console.log("del");
           const newProds = products.filter((prod) => prod._id !== id);
@@ -82,7 +82,7 @@ function Homeprod() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     axios
-      .get("https://slow-is-smooth-serverside-2.onrender.com/products/get")
+      .get("https://slow-is-smooth-serverside-rvyo.onrender.com/api/products/get")
       .then((response) => {
         console.log("Response data:", response.data.data); // Debugging line
 
