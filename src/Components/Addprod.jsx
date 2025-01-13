@@ -35,7 +35,7 @@ const verification  =() =>{
   if(verification()){
       console.log("Product added:", product);
       axios
-      .post("http://localhost:4000/api/products/add", product)
+      .post("https://slow-is-smooth-serverside-2.onrender.com", product)
       .then((data) => {
         console.log(data);
       })
