@@ -22,7 +22,7 @@ function Usehook({product,onUpdate}) {
     const id =product._id
     console.log('id',id)
     axios
-      .patch(`http://localhost:4000/api/products/update/${id}`, updatedProduct)
+      .patch(`https://slow-is-smooth-serverside-2.onrender.com/products/updat/${id}`, updatedProduct)
       .then((response) => {
         console.log('afterPatch',response.data);
         onUpdate(response.data);
